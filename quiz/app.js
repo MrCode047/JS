@@ -12,7 +12,16 @@ let questions = [`Quel est l'âge du capitaine?
 1. Homer Simpson
 2. Jonhatan
 3. Un citron pressé`,
+
+`Ça fait combien 1 + 1?
+1. 2
+2. 11
+3. 3`
 ]
+
+let reponses = [1,3,2,1];
+
+let compteurBonnesReponses = 0;
 
 alert(
   "Bienvenue sur ce quiz !" +
@@ -23,24 +32,21 @@ alert(
 
 alert("Es-tu prêt ?" + "\nC'est parti !");
 
-let reponses = [1,3,2];
-
-let compteurBonnesReponses = 0;
-
-// Question
 // i=i+1 -> i+=1 -> i++
 for (let i = 0; i < questions.length; i++) {
-  let intituleQuestion = "Question" + (i+1) + "/" + questions.length + "\n";  
+  let intituleQuestion = "Question " + (i+1) + "/" + questions.length + "\n";  
   let reponseUtilisateur = prompt( intituleQuestion + questions[i]);
 
   console.log(reponseUtilisateur);
 
   if (reponseUtilisateur == reponses[i]) {
     alert("Bien joué !");
+    console.log("Bien joué !");
     compteurBonnesReponses=compteurBonnesReponses+1;
   } 
   else {
     alert("Mauvaise réponse ...");
+    console.log("Mauvaise réponse ...");
   }
 }
 
