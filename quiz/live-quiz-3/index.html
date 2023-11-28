@@ -14,15 +14,29 @@
     <main class="quiz">
         <div class="welcomescreen">
             <h1 class="quiz_h1">BIENVENUE SUR CE QUIZ !</h1>
-            <p class="quiz_p">Il sera composé de 3 questions...</p>
+            <p class="quiz_p">Il sera composé de 
+                <span class="nbquestions">X</span>
+                 questions...</p>
             <button class="quiz_btn">OK</button>
+        </div>
+
+        <div class="questionscreen">
+            <h2>Question 1/3</h2>
+            <h3>Coucou, tu veux voir ..... ?</h3>
+            <ul class="question_answers">
+                <li class="answer answer--correct">Oui</li>
+                <li class="answer">Non</li>
+                <li class="answer answer--wrong">La réponse D</li>
+            </ul>
         </div>
 
         <div class="resultscreen">
             <h2 class="quiz_h2">Résultats !</h2>
             <p class="quiz_p">
-                <span id="nbcorrects">2</span> 
-                réponses sur 3 correctes</p>
+                <span id="nbcorrects">X</span> 
+                réponses sur 
+                <span class="nbquestions">X</span>
+                 correctes</p>
         </div>
     </main>
 

@@ -74,5 +74,21 @@ console.log(quiz);
 
 //quiz.launch();
 
-let elNbCorrects = document.getElementById("nbcorrects");
-console.log(elNbCorrects.textContent);
+//let elNbCorrects = document.getElementById("nbcorrects");
+let elNbCorrects = document.querySelectorAll("#nbcorrects");
+console.log(elNbCorrects);
+
+console.log(elNbCorrects.innerHTML);
+elNbCorrects.innerHTML = quiz.nbCorrects;
+
+//let elNbQuestions = document.getElementsByClassName("nbquestions");
+let elNbQuestions = document.querySelectorAll(".nbquestions");
+console.log(elNbQuestions);
+
+//for(let i=0; i<elNbQuestions.length;i++) {
+//    elNbQuestions[i].textContent = quiz.questions.length;
+//}
+
+elNbQuestions.forEach(function(elNbQuestions) {
+    elNbQuestions.textContent = quiz.questions.length;
+});
